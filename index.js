@@ -67,13 +67,8 @@ const feelBetterImage = {
       template_type: "generic",
       elements: [{
         title: "Oh, I’m sure everything’s going to be alright.",
-        image_url: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg",
-        // default_action: {
-        //   type: "web_url",
-        //   webview_height_ratio: "tall",
-        //   messenger_extensions: true,
-        //   url: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg"
-        // }
+        subtitle: "Here’s something to cheer you up ☺️",
+        image_url: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg"
       }]
     }
   }
