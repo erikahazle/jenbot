@@ -27,6 +27,7 @@ app.get('/', function (req, res) {
 // })
 
 const feelBetterImage = {
+  text: "Hope this will cheer you up 🐶"
   attachment: {
     type: "image",
     payload: {
