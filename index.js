@@ -40,6 +40,10 @@ const feelBetterImage = {
   }
 }
 
+const helloMessage = {
+  text: 'Hey, good to see you! How are you doing today?'
+}
+
 const thankYouMessage = {
   text: 'No problem, how else can I help you?'
 }
@@ -53,6 +57,11 @@ function getMessageData (sender, text) {
   let message
   content.forEach(function (text) {
     switch (text) {
+      case 'hey':
+      case 'hi':
+      case 'hello':
+        message = helloMessage
+        break
       case 'thanks':
       case 'thank':
         message = thankYouMessage
@@ -69,6 +78,8 @@ function getMessageData (sender, text) {
 }
 
 function sendTextMessage(sender, text) {
+    console.log('sender', sender)
+    console.log('text', text)
     request({
       url: 'https://graph.facebook.com/v2.6/me/messages',
       qs: { access_token: token },
