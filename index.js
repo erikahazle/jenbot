@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
 //  res.send('Error, wrong token')
 // })
 
-const messageData = {
+const feelBetterImage = {
   attachment: {
     type: "image",
     payload: {
@@ -35,15 +35,42 @@ const messageData = {
   }
 }
 
+const thankYouMessage = {
+  text: 'No problem, how else can I help you?'
+}
+
+const unknownMessage = {
+  text: 'I\'m sorry, I\'m not human yet. Let\'s stick to our existing story 🦄'
+}
+
+function getMessageData (sender, text) {
+  const content = text.split(' ')
+  let message
+  content.forEach(function (text) {
+    switch (text) {
+      case 'thanks':
+      case 'thank':
+        message = thankYouMessage
+        break
+      case 'sad':
+      case 'nervous':
+        message = thankYouMessage
+        break
+      default:
+        message = unknownMessage
+    }
+  })
+  return message
+}
+
 function sendTextMessage(sender, text) {
-    // let messageData = { text: text }
     request({
       url: 'https://graph.facebook.com/v2.6/me/messages',
-      qs: {access_token:token},
+      qs: { access_token: token },
       method: 'POST',
     json: {
-        recipient: {id:sender},
-      message: messageData,
+      recipient: { id: sender },
+      message: getMessageData(sender, text),
     }
   }, function(error, response, body) {
     if (error) {
