@@ -18,13 +18,55 @@ app.get('/', function (req, res) {
   res.send('Hello world, I am a chat bot')
 })
 
-// for Facebook verification
-// app.get('/webhook/', function (req, res) {
-//  if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
-//    res.send(req.query['hub.challenge'])
-//  }
-//  res.send('Error, wrong token')
-// })
+
+const selectTopic = {
+  "attachment": {
+    "type": "template",
+    "payload": {
+      "template_type": "generic",
+      "elements": [
+        {
+          "title": "Tech for good",
+          "image_url":"https://petersfancybrownhats.com/company_image.png",
+          "default_action": {
+            "type": "web_url",
+            "url": "https://unsplash.com/search/photos/tech?photo=5v69Vl62NCM",
+            "messenger_extensions": true,
+            "webview_height_ratio": "tall",
+            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+          },
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Select topic",
+              "payload": "DEVELOPER_DEFINED_PAYLOAD"
+            }
+          ]
+        },
+        {
+          "title": "World Peace",
+          "image_url": "https://unsplash.com/search/photos/peace?photo=1TqTPPz3xpg",
+          "default_action": {
+            "type": "web_url",
+            "url": "https://peterssendreceiveapp.ngrok.io/view?item=103",
+            "messenger_extensions": true,
+            "webview_height_ratio": "tall",
+            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+          },
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Select topic",
+              "payload": "DEVELOPER_DEFINED_PAYLOAD"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+
 
 const feelBetterImage = {
   attachment: {
@@ -45,11 +87,11 @@ const helloMessage = {
 }
 
 const thankYouMessage = {
-  text: 'No problem, how else can I help you?'
+  text: 'No problem, is there anything else I can help you with?'
 }
 
 const unknownMessage = {
-  text: 'I\'m sorry, I\'m not human yet. Let\'s stick to our existing story 🦄'
+  text: 'I\'m sorry, I\'m not human yet. Let\'s stick to our script 😜🦄'
 }
 
 function getMessageData (sender, text) {
@@ -69,6 +111,9 @@ function getMessageData (sender, text) {
       case 'sad':
       case 'nervous':
         message = feelBetterImage
+        break
+      case 'happening':
+        message = selectTopic
         break
     }
   })
