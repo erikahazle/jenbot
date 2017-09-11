@@ -179,8 +179,8 @@ app.post('/webhook/', function (req, res) {
 
     if (standby_events) {
       let postbackData = standby_events[0].postback
-      sendTextMessage(postbackData.sender.id, postbackData.postback.title)
-      console.log('postbackData', postbackData)
+      // sendTextMessage(postbackData.sender.id, postbackData.postback.title)
+      console.log('postbackData.sender', postbackData.sender)
     }
     res.sendStatus(200)
 })
