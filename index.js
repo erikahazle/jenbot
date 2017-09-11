@@ -26,22 +26,69 @@ app.get('/', function (req, res) {
 //  res.send('Error, wrong token')
 // })
 
+// const feelBetterImage = {
+//   attachment: {
+//     type: "template",
+//     payload: {
+//       template_type: "generic",
+//       elements: [
+//         {
+//           title: "Hope this will cheer you up 🐶",
+//           imageUrl: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg",
+//           default_action: {
+//             type: "web_url",
+//             url: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg",
+//             messenger_extensions: true,
+//             webview_height_ratio: "tall",
+//             fallback_url: "https://peterssendreceiveapp.ngrok.io/"
+//           }
+//         },
+//         buttons: [
+//           {
+//             type: "web_url",
+//             url: "https://petersfancybrownhats.com",
+//             title: "View Website"
+//           },
+//           {
+//             type: "postback",
+//             title: "Start Chatting",
+//             payload: "DEVELOPER_DEFINED_PAYLOAD"
+//           }
+//         ]
+//       ]
+//     }
+//   }
+// }
+
 const feelBetterImage = {
-  attachment: {
-    type: "template",
-    payload: {
-      template_type: "generic",
-      elements: [
+  "attachment":{
+    "type":"template",
+    "payload": {
+      "template_type":"generic",
+      "elements":[
         {
-          title: "Hope this will cheer you up 🐶",
-          imageUrl: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg",
-          default_action: {
-            type: "web_url",
-            url: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg",
-            messenger_extensions: true,
-            webview_height_ratio: "tall",
-            fallback_url: "https://peterssendreceiveapp.ngrok.io/"
-          }
+          "title":"Welcome to Peter\'s Hats",
+          "image_url":"https://petersfancybrownhats.com/company_image.png",
+          "subtitle":"We\'ve got the right hat for everyone.",
+          "default_action": {
+          "type": "web_url",
+          "url": "https://peterssendreceiveapp.ngrok.io/view?item=103",
+          "messenger_extensions": true,
+          "webview_height_ratio": "tall",
+          "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+        },
+          "buttons":[
+            {
+              "type":"web_url",
+              "url":"https://petersfancybrownhats.com",
+              "title":"View Website"
+            },
+            {
+              "type":"postback",
+              "title":"Start Chatting",
+              "payload":"DEVELOPER_DEFINED_PAYLOAD"
+            }
+          ]
         }
       ]
     }
