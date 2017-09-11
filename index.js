@@ -26,12 +26,12 @@ const selectTopic = {
       "template_type": "generic",
       "elements": [
         {
-          "title": "Tech for good",
-          "image_url": "https://images.unsplash.com/photo-1485182317254-4d42489e041b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=9fb9d268fe3944e870e79035c1698244",
+          "title": "Tech for Good",
+          "image_url": "https://images.unsplash.com/photo-1493200754321-b1d3cbc969a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=adf18e73837a4fde34f10265f9858fa2",
           "buttons": [
             {
               "type": "postback",
-              "title": "Select topic",
+              "title": "Explore Tech for Good",
               "payload": "DEVELOPER_DEFINED_PAYLOAD"
             }
           ]
@@ -42,7 +42,18 @@ const selectTopic = {
           "buttons": [
             {
               "type": "postback",
-              "title": "Select topic",
+              "title": "Explore World Peace",
+              "payload": "DEVELOPER_DEFINED_PAYLOAD"
+            }
+          ]
+        },
+        {
+          "title": "Social Enterprises",
+          "image_url": "https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=111ce4c93bb29922945097ae8e534825",
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Explore Social Enterprises",
               "payload": "DEVELOPER_DEFINED_PAYLOAD"
             }
           ]
@@ -51,22 +62,6 @@ const selectTopic = {
     }
   }
 }
-
-// const selectTopic = {
-//   attachment: {
-//     type: "template",
-//     payload: {
-//       template_type: "generic",
-//       elements: [{
-//         title: "Oh, I’m sure everything’s going to be alright.",
-//         subtitle: "Here’s something to cheer you up ☺️",
-//         image_url: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg"
-//       }]
-//     }
-//   }
-// }
-
-
 
 const feelBetterImage = {
   attachment: {
@@ -94,6 +89,10 @@ const unknownMessage = {
   text: 'I\'m sorry, I\'m not human yet. Let\'s stick to our script 😜🦄'
 }
 
+const enterpriseTopic = {
+  text: 'Enterprise'
+}
+
 function getMessageData (sender, text) {
   const content = text.split(' ')
   let message
@@ -115,6 +114,9 @@ function getMessageData (sender, text) {
       case 'happening':
         message = selectTopic
         break
+      case 'enterprises':
+        message = enterpriseTopic
+        break
     }
   })
 
@@ -125,7 +127,7 @@ function getMessageData (sender, text) {
   return message
 }
 
-function sendTextMessage(sender, text) {
+function sendTextMessage (sender, text) {
     console.log('sender', sender)
     console.log('text', text)
     request({
