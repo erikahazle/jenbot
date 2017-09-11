@@ -54,7 +54,7 @@ function getMessageData (sender, text) {
         break
       case 'sad':
       case 'nervous':
-        message = thankYouMessage
+        message = feelBetterImage
         break
       default:
         message = unknownMessage
