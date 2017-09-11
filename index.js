@@ -162,10 +162,10 @@ function sendTextMessage (sender, text) {
 const token = process.env.FB_PAGE_ACCESS_TOKEN
 
 app.post('/webhook/', function (req, res) {
-    console.log('req.body -->', req.body.entry)
+    // console.log('req.body -->', req.body.entry)
     let messaging_events = req.body.entry[0].messaging
     let standby_events = req.body.entry[0].standby
-    console.log('standby_events', standby_events)
+    // console.log('standby_events', standby_events)
     if (messaging_events) {
       for (let i = 0; i < messaging_events.length; i++) {
         let event = req.body.entry[0].messaging[i]
@@ -180,6 +180,7 @@ app.post('/webhook/', function (req, res) {
     if (standby_events) {
       let postbackData = standby_events[0].postback
       // sendTextMessage(postbackData.sender.id, postbackData.postback.title)
+      console.log('postbackData', postbackData)
       console.log('postbackData.sender', postbackData.sender)
     }
     res.sendStatus(200)
