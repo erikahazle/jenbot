@@ -61,13 +61,14 @@ app.get('/', function (req, res) {
 // }
 
 const feelBetterImage = {
-  "attachment": {
-    "type": "template",
-    "payload": {
-      "template_type": "generic",
-      "elements": [{
-        "title": "Oh, I’m sure everything’s going to be alright.",
-        "image_url": "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg",
+  attachment: {
+    type: "template",
+    payload: {
+      template_type: "generic",
+      elements: [{
+        title: "Oh, I’m sure everything’s going to be alright.",
+        image_url: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg",
+        webview_height_ratio: "tall",
       }]
     }
   }
