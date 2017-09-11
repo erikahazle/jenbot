@@ -170,8 +170,8 @@ app.post('/webhook/', function (req, res) {
       }
     }
 
-    if (standby) {
-      let postbackData = standby[0].postback
+    if (standby_events) {
+      let postbackData = standby_events[0].postback
       console.log('postbackData', postbackData)
     }
     res.sendStatus(200)
