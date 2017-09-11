@@ -66,8 +66,8 @@ const feelBetterImage = {
     "payload": {
       "template_type": "generic",
       "elements": [{
-        "title": "Welcome to Peter\'s Hats",
-        "image_url": "https://petersfancybrownhats.com/company_image.png",
+        "title": "Oh, I’m sure everything’s going to be alright.",
+        "image_url": "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg",
       }]
     }
   }
