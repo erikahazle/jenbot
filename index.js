@@ -172,6 +172,7 @@ app.post('/webhook/', function (req, res) {
 
     if (standby_events) {
       let postbackData = standby_events[0].postback
+      // sendTextMessage(sender, standby_events[0].postback.title)
       console.log('postbackData', postbackData)
     }
     res.sendStatus(200)
