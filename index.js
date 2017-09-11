@@ -56,7 +56,7 @@ function getMessageData (sender, text) {
   const content = text.split(' ')
   let message
   content.forEach(function (text) {
-    switch (text) {
+    switch (text.toLowerCase()) {
       case 'hey':
       case 'hi':
       case 'hello':
