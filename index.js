@@ -93,6 +93,10 @@ const enterpriseTopic = {
   text: 'Enterprise'
 }
 
+const techTopic = {
+  text: 'techTopic'
+}
+
 function getMessageData (sender, text) {
   const content = text.split(' ')
   let message
@@ -116,6 +120,9 @@ function getMessageData (sender, text) {
         break
       case 'enterprises':
         message = enterpriseTopic
+        break
+      case 'tech':
+        message = techTopic
         break
     }
   })
@@ -172,7 +179,7 @@ app.post('/webhook/', function (req, res) {
 
     if (standby_events) {
       let postbackData = standby_events[0].postback
-      // sendTextMessage(sender, standby_events[0].postback.title)
+      sendTextMessage(postbackData.sender.id, postbackData.postback.title)
       console.log('postbackData', postbackData)
     }
     res.sendStatus(200)
