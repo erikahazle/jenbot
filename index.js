@@ -138,18 +138,18 @@ function sendTextMessage (sender, text) {
       recipient: { id: sender },
       message: getMessageData(sender, text),
     }
-  }, function(error, response, body) {
+  }, function (error, response, body) {
     if (error) {
-        console.log('Error sending messages: ', error)
+      console.log('Error sending messages: ', error)
     } else if (response.body.error) {
-        console.log('Error: ', response.body.error)
-      }
-    })
+      console.log('Error: ', response.body.error)
+    }
 
     // sendTextMessage(sender)
 
-    // console.log('response', response)
-    // console.log('body', body)
+    console.log('response', response)
+    console.log('body', body)
+  })
 }
 
 const token = process.env.FB_PAGE_ACCESS_TOKEN
