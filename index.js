@@ -54,7 +54,7 @@ const selectTopic = {
             {
               "type": "postback",
               "title": "Explore Social Enterprises",
-              "payload": "DEVELOPER_DEFINED_PAYLOAD"
+              "payload": "SELECT_ENTERPRISE"
             }
           ]
         }
@@ -146,13 +146,16 @@ function sendTextMessage (sender, text) {
       }
     })
 
-    console.log('response', response)
-    console.log('body', body)
+    // sendTextMessage(sender)
+
+    // console.log('response', response)
+    // console.log('body', body)
 }
 
 const token = process.env.FB_PAGE_ACCESS_TOKEN
 
 app.post('/webhook/', function (req, res) {
+    console.log('req.body -->', req.body)
     let messaging_events = req.body.entry[0].messaging
     for (let i = 0; i < messaging_events.length; i++) {
       let event = req.body.entry[0].messaging[i]
