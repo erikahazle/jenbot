@@ -28,13 +28,6 @@ const selectTopic = {
         {
           "title": "Tech for good",
           "image_url":"https://petersfancybrownhats.com/company_image.png",
-          "default_action": {
-            "type": "web_url",
-            "url": "https://unsplash.com/search/photos/tech?photo=5v69Vl62NCM",
-            "messenger_extensions": true,
-            "webview_height_ratio": "tall",
-            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-          },
           "buttons": [
             {
               "type": "postback",
@@ -46,13 +39,6 @@ const selectTopic = {
         {
           "title": "World Peace",
           "image_url": "https://unsplash.com/search/photos/peace?photo=1TqTPPz3xpg",
-          "default_action": {
-            "type": "web_url",
-            "url": "https://peterssendreceiveapp.ngrok.io/view?item=103",
-            "messenger_extensions": true,
-            "webview_height_ratio": "tall",
-            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-          },
           "buttons": [
             {
               "type": "postback",
@@ -65,6 +51,20 @@ const selectTopic = {
     }
   }
 }
+
+// const selectTopic = {
+//   attachment: {
+//     type: "template",
+//     payload: {
+//       template_type: "generic",
+//       elements: [{
+//         title: "Oh, I’m sure everything’s going to be alright.",
+//         subtitle: "Here’s something to cheer you up ☺️",
+//         image_url: "https://i.pinimg.com/736x/f6/89/d9/f689d9982937ba09ad634f9ec6443258.jpg"
+//       }]
+//     }
+//   }
+// }
 
 
 
@@ -143,6 +143,9 @@ function sendTextMessage(sender, text) {
         console.log('Error: ', response.body.error)
       }
     })
+
+    console.log('response', response)
+    console.log('body', body)
 }
 
 const token = process.env.FB_PAGE_ACCESS_TOKEN
