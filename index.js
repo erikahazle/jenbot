@@ -70,10 +70,13 @@ function getMessageData (sender, text) {
       case 'nervous':
         message = feelBetterImage
         break
-      default:
-        message = unknownMessage
     }
   })
+
+  if (!message) {
+    message = unknownMessage
+  }
+
   return message
 }
 
