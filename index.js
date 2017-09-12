@@ -60,7 +60,7 @@ const causes = {
       "elements": [
         {
           "title": "Hurricane Irma",
-          "subtitle": "Hurricane Irma was still wreaking havoc in South Carolina late Monday after causing at least 10 deaths in Florida, Georgia and South Carolina."
+          "subtitle": "Hurricane Irma was still wreaking havoc in South Carolina late Monday after causing at least 10 deaths in Florida, Georgia and South Carolina.",
           "image_url": "http://a.abcnews.com/images/International/st-johns-county-fire-rescue-house-ht-jt-170911_4x3_992.jpg",
           "buttons": [
             {
