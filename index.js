@@ -33,10 +33,10 @@ const techTopic = {
             {
               "title": "Read more",
               "type": "web_url",
-              "url": "https://lightful.com",
+              "url": "https://peterssendreceiveapp.ngrok.io/collection",
               "messenger_extensions": true,
               "webview_height_ratio": "tall",
-              "fallback_url": "https://lightful.com"
+              "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
             }
           ]
         },
@@ -49,6 +49,13 @@ const techTopic = {
           "title": "Classic Blue T-Shirt",
           "image_url": "https://images.unsplash.com/photo-1493200754321-b1d3cbc969a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=adf18e73837a4fde34f10265f9858fa2",
           "subtitle": "100% Cotton, 200% Comfortable"
+        }
+      ],
+       "buttons": [
+        {
+          "title": "View More",
+          "type": "postback",
+          "payload": "payload"
         }
       ]
     }
