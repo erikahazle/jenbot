@@ -28,17 +28,7 @@ const techTopic = {
         {
           "title": "Lightful are taking tech world by storm",
           "subtitle": "Sign ups are going up as everyone wants to see what Lightful platform is all about.",
-          "image_url": "https://daks2k3a4ib2z.cloudfront.net/58f86df185ceff1c5f410f61/5996e78e7488150001d1f191_iPhones-optimised.png",
-          "buttons": [
-            {
-              "title": "Read more",
-              "type": "web_url",
-              "url": "https://peterssendreceiveapp.ngrok.io/collection",
-              "messenger_extensions": true,
-              "webview_height_ratio": "tall",
-              "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-            }
-          ]
+          "image_url": "https://daks2k3a4ib2z.cloudfront.net/58f86df185ceff1c5f410f61/5996e78e7488150001d1f191_iPhones-optimised.png"
         },
         {
           "title": "Classic White T-Shirt",
