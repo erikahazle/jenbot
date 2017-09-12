@@ -27,8 +27,18 @@ const techTopic = {
       "elements": [
         {
           "title": "Lightful are taking tech world by storm",
-          "subtitle": "See their labs work",
-          "image_url": "https://images.unsplash.com/photo-1493200754321-b1d3cbc969a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=adf18e73837a4fde34f10265f9858fa2",
+          "subtitle": "Sign ups are going up as everyone wants to see what Lightful platform is all about.",
+          "image_url": "https://daks2k3a4ib2z.cloudfront.net/58f86df185ceff1c5f410f61/5996e78e7488150001d1f191_iPhones-optimised.png",
+          "buttons": [
+            {
+              "title": "Read more",
+              "type": "web_url",
+              "url": "https://lightful.com",
+              "messenger_extensions": true,
+              "webview_height_ratio": "tall",
+              "fallback_url": "https://lightful.com"
+            }
+          ]
         },
         {
           "title": "Classic White T-Shirt",
@@ -39,13 +49,6 @@ const techTopic = {
           "title": "Classic Blue T-Shirt",
           "image_url": "https://images.unsplash.com/photo-1493200754321-b1d3cbc969a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=adf18e73837a4fde34f10265f9858fa2",
           "subtitle": "100% Cotton, 200% Comfortable"
-        }
-      ],
-       "buttons": [
-        {
-          "title": "View More",
-          "type": "postback",
-          "payload": "payload"
         }
       ]
     }
