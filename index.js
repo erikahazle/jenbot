@@ -31,14 +31,14 @@ const techTopic = {
           "image_url": "https://daks2k3a4ib2z.cloudfront.net/58f86df185ceff1c5f410f61/5996e78e7488150001d1f191_iPhones-optimised.png"
         },
         {
-          "title": "Classic White T-Shirt",
-          "subtitle": "See all our colors",
-          "image_url": "https://images.unsplash.com/photo-1493200754321-b1d3cbc969a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=adf18e73837a4fde34f10265f9858fa2",
+          "title": "Charities: to Salesforce or not to Salesforce",
+          "subtitle": "The good the bad and the ugly from the world of Salesforce and third sector",
+          "image_url": "http://content.trust.salesforce.com/export/system/modules/com.salesforce.trust/resources/img/TrustLogoWhite.png",
         },
         {
-          "title": "Classic Blue T-Shirt",
+          "title": "Touch pay and donations",
+          "subtitle": "Can Apple win the race to become the top donation device?",
           "image_url": "https://images.unsplash.com/photo-1493200754321-b1d3cbc969a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=adf18e73837a4fde34f10265f9858fa2",
-          "subtitle": "100% Cotton, 200% Comfortable"
         }
       ],
        "buttons": [
