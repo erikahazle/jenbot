@@ -33,7 +33,7 @@ const techTopic = {
         {
           "title": "Charities: to Salesforce or not to Salesforce",
           "subtitle": "The good the bad and the ugly from the world of Salesforce and third sector",
-          "image_url": "http://content.trust.salesforce.com/export/system/modules/com.salesforce.trust/resources/img/TrustLogoWhite.png",
+          "image_url": "https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAgwAAAAJDNjZWExMGM0LWRhYTItNDNlOC1hMDU2LTk4NzU3NjZmOTY4NQ.png",
         },
         {
           "title": "Touch pay and donations",
