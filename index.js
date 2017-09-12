@@ -18,6 +18,40 @@ app.get('/', function (req, res) {
   res.send('Hello world, I am a chat bot')
 })
 
+const techTopic = {
+  "attachment": {
+    "type": "template",
+    "payload": {
+      "template_type": "list",
+      "top_element_style": "compact",
+      "elements": [
+        {
+          "title": "Lightful are taking tech world by storm",
+          "subtitle": "See their labs work",
+          "image_url": "https://images.unsplash.com/photo-1493200754321-b1d3cbc969a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=adf18e73837a4fde34f10265f9858fa2",
+        },
+        {
+          "title": "Classic White T-Shirt",
+          "subtitle": "See all our colors",
+          "image_url": "https://images.unsplash.com/photo-1493200754321-b1d3cbc969a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=adf18e73837a4fde34f10265f9858fa2",
+        },
+        {
+          "title": "Classic Blue T-Shirt",
+          "image_url": "https://images.unsplash.com/photo-1493200754321-b1d3cbc969a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=adf18e73837a4fde34f10265f9858fa2",
+          "subtitle": "100% Cotton, 200% Comfortable"
+        }
+      ],
+       "buttons": [
+        {
+          "title": "View More",
+          "type": "postback",
+          "payload": "payload"
+        }
+      ]
+    }
+  }
+}
+
 
 const selectTopic = {
   "attachment": {
@@ -93,9 +127,9 @@ const enterpriseTopic = {
   text: 'Enterprise'
 }
 
-const techTopic = {
-  text: 'techTopic'
-}
+// const techTopic = {
+//   text: 'techTopic'
+// }
 
 function getMessageData (sender, text) {
   const content = text.split(' ')
