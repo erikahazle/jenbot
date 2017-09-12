@@ -53,6 +53,50 @@ const techTopic = {
 }
 
 
+const causes = {
+  "attachment": {
+    "type": "template",
+    "payload": {
+      "template_type": "generic",
+      "elements": [
+        {
+          "title": "Hurricane Irma",
+          "subtitle": "Hurricane Irma was still wreaking havoc in South Carolina late Monday after causing at least 10 deaths in Florida, Georgia and South Carolina."
+          "image_url": "http://a.abcnews.com/images/International/st-johns-county-fire-rescue-house-ht-jt-170911_4x3_992.jpg",
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Donate £5",
+              "payload": "DEVELOPER_DEFINED_PAYLOAD"
+            },
+            {
+              "type": "postback",
+              "title": "Donate £10",
+              "payload": "DEVELOPER_DEFINED_PAYLOAD"
+            }
+          ]
+        },
+        {
+          "title": "Rohingya crisis",
+          "image_url": "https://ichef.bbci.co.uk/news/660/cpsprodpb/6938/production/_97763962_cab77ecb-f988-4fa5-859b-caf61855d504.jpg",
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Donate £5",
+              "payload": "DEVELOPER_DEFINED_PAYLOAD"
+            },
+            {
+              "type": "postback",
+              "title": "Donate £10",
+              "payload": "DEVELOPER_DEFINED_PAYLOAD"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
 const selectTopic = {
   "attachment": {
     "type": "template",
@@ -127,9 +171,9 @@ const enterpriseTopic = {
   text: 'Enterprise'
 }
 
-// const techTopic = {
-//   text: 'techTopic'
-// }
+const donatedMessage = {
+  text: 'Your donation has been sent via Lightful platform. We will keep you updated on the progress of the cause.'
+}
 
 function getMessageData (sender, text) {
   const content = text.split(' ')
@@ -157,6 +201,12 @@ function getMessageData (sender, text) {
         break
       case 'tech':
         message = techTopic
+        break
+      case 'causes':
+        message = causes
+        break
+      case 'donate':
+        message = donatedMessage
         break
     }
   })
